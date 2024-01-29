@@ -3,7 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FOOD</title>
+
+    <style>
+      body {
+        background-color: rgba(181, 151, 151, 0.5);
+      }
+      h1 {
+        text-align: center;
+        color: blueviolet;
+      }
+      h2 {
+        text-align: center;
+        border: 1px solid #7d51e8;
+        padding: 22px;
+        font-size: 25px;
+        border-radius: 56px;
+      }
+
+      .content {
+        max-width: 900px;
+        margin: auto;
+        background-color: #f2f2f2;
+        overflow: auto;
+      }
+      .food {
+        margin: 8px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        width: 400px;
+        display: inline-block;
+        height: 200px;
+        padding: 15px 25px;
+        cursor: pointer;
+
+        transition: transform;
+      }
+      .food:hover {
+        transform: translateY(-10px);
+      }
+      .food img {
+        width: 100%;
+        height: auto;
+      }
+      .foodName {
+        padding: 5px;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 10px;
+        font-family: monospace;
+        text-transform: capitalize;
+      }
+      p {
+        padding: 5px;
+        line-height: 20px;
+        font-size: 20px;
+      }
+      .more {
+        display: block;
+        text-decoration: none;
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 10px;
+      }
+      more:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding-left: 20px;
+        color: #ffffff;
+        padding: 10px 15px;
+        background-color: #7d51e8;
+        font-size: 25px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        background-color: rgb(46, 46, 188);
+      }
+      .footer {
+        padding-left: 320px;
+        font-size: 20px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="content">
+      <h1>
+        <em>DELICIOUS FOOD FROM FLORENCE !!👩‍🍳</em>
+      </h1>
+      <h2>DIFFERENT FOOD WITH DIFFERENT TASTE</h2>
+      <hr />
+      <hr />
+      <div class="food">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/133/original/download.jpeg?1706730081"
+          alt=""
+          width="200"
+        />
+        <div class="foodName">Bugger</div>
+      </div>
+
+      <div class="food">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/135/original/download_%281%29.jpeg?1706730521"
+          alt=""
+        />
+        <div class="foodName">pizza</div>
+      </div>
+
+      <div class="food">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/136/original/pexels-photo-70497.jpeg?1706730634"
+          alt=""
+        />
+
+        <div class="foodName">chips</div>
+      </div>
+
+      <div class="food">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/137/original/rice.jpeg?1706730726"
+          alt=""
+        />
+        <div class="foodName">rice</div>
+      </div>
+
+      <p>
+        If you like travel and you like tasting the different food, there is
+        interesting information about the places we have visited. There are also
+        food recipes and food suggestions so you can experience the same flavors
+        at your table, like trip to the place without leaving your home. No need
+        to know all about it, my food will taste just as good.so come here and
+        taste my food good food bring happpiness and healthy body i love you all
+        as my food ❤💛💚😍😊
+      </p>
+
+      <a
+        class="more"
+        href="https://www.google.com/search?q=food+pictures&sourceid=chrome&ie=UTF-8"
+        target="-blank"
+        >learn more food website</a
+      >
+      <br />
+      <button>Click Here To Buy</button>
+
+      <p class="footer"><strong>coded by florence mkandawire 👩‍💻</strong></p>
+    </div>
+
+    <script>
+      function BuyFood() {
+        let name = prompt("what is your name");
+        let location = prompt("name your location");
+        let foodNam = prompt("name of food you want to buy");
+
+        if (location === "mzuzu") {
+          alert(
+            " You can buy " +
+              foodNam +
+              " because you are in " +
+              location +
+              " Thanks "
+          );
+          let h2 = document.querySelector("h2");
+          h2.innerHTML = "Happy Customer thanks 😍";
+        } else {
+          alert(
+            "sorry " + name + " you can not buy only people from Mzuzu can buy"
+          );
+        }
+      }
+
+      let selectbutton = document.querySelector("button");
+      selectbutton.addEventListener("click", BuyFood);
+    </script>
+  </body>
 </html>
